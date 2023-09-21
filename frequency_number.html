@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findFrequency(arr) {
+  const frequency = {};
+
+  for (const num of arr) {
+    if (frequency[num]) {
+      frequency[num]++;
+    } else {
+      frequency[num] = 1;
+    }
+  }
+
+  return frequency;
+}
+
+// Example usage:
+const numbers = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4];
+const frequency = findFrequency(numbers);
+
+for (const num in frequency) {
+  console.log(`Number ${num} appears ${frequency[num]} times.`);
+}
+
+    </script>
+</body>
+</html>
